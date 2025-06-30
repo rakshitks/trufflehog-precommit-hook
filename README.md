@@ -17,14 +17,8 @@ It works by scanning the code during every `git commit` or `git push` and blocks
 
 ## ⚙️ Installation
 
-```bash
-git clone https://github.com/yourusername/trufflehog-precommit-hook.git
-cd trufflehog-precommit-hook/
-chmod +x install.sh
-./install.sh
-```
 
-## What This Script Does
+### What This Script Does
 
 - Installs `pre-commit` (if not already installed)
 - Installs the latest `trufflehog` binary
@@ -37,8 +31,8 @@ chmod +x install.sh
 1. **Clone this repository** (or copy the script into your repo):
 
     ```bash
-    git clone https://github.com/your-org/your-repo.git
-    cd your-repo
+    git clone https://github.com/rakshitks/trufflehog-precommit-hook.git
+    cd trufflehog-precommit-hook
     ```
 
 2. **Make the script executable and run it**:
@@ -55,7 +49,31 @@ chmod +x install.sh
     # Output should be: ~/.git/hooks
     ```
 
-4. **Now, whenever you make a commit, TruffleHog will scan your changes for secrets.**
+
+## ✅ Testing the Pre-commit Hook
+
+1. **Clone your repository**:
+
+   ```bash
+   git clone <your-repo-url>
+   cd <your-repo-folder>
+2. **Make changes to any file and stage them:**
+```
+git add .
+```
+3. **Try committing the changes:**
+``` 
+git commit -m "My first commit"
+```
+4. **Expected Result:**
+   - If the setup was successful, trufflehog will automatically run during the commit.
+   - If any secrets are found, the commit will fail and you’ll see output like:
+
+```
+If any secrets are found, the commit will fail and you’ll see output like:
+
+```
+
 
 ## Files Included
 
