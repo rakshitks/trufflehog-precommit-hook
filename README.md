@@ -70,8 +70,7 @@ git commit -m "My first commit"
    - If any secrets are found, the commit will fail and you’ll see output like:
 
 ```
-If any secrets are found, the commit will fail and you’ll see output like:
-
+TruffleHog...............................................................Failed
 ```
 
 
